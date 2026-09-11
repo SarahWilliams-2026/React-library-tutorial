@@ -4,17 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Book = ({ book }) => {
     return (
         <div className="book">
-            <a href="">
+            <Link to="">
                 <figure className="book__img--wrapper">
                     <img src={book.url} 
                         alt="" 
                         className="book__img" />
                 </figure>
-            </a>
+            </Link>
             <div className="book__title">
-                <a href="/" className="book__title">
+                <Link to="/" className="book__title">
                     {book.title}
-                </a>
+                </Link>
             </div>
             <div className="book__ratings">
                 {
@@ -28,7 +28,7 @@ const Book = ({ book }) => {
                 {book.salePrice ? (
                     <>
                     <span className="book__price--normal">${book.originalPrice.toFixed(2)}</span>
-                    {book.salePrice.toFixed(2)}
+                    ${book.salePrice.toFixed(2)}
                     </>
                 ) : (
                     <>${book.originalPrice.toFixed(2)}</>
